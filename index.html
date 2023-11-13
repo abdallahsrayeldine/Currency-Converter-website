@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Currency Converter</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+</head>
+<body>
+<header>
+    <h1 style="text-align: center;">Currency Exchange Rates</h1>
+    <hr>
+    <nav>
+        <button onclick="showSection('converterSection')">Converter</button>
+        <button onclick="showSection('exchangerSection')">Exchanger</button>
+    </nav>
+</header>
+<main>
+    <div id="converterSection">
+        <h2>Select the currency to convert from:</h2>
+        <select id="converterFrom">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="AUD">AUD</option>
+            <option value="CAD">CAD</option>
+            <option value="LBP">LBP</option>
+        </select>
+
+        <h2>Select the currency to convert to:</h2>
+        <select id="converterTo">
+            <option value="LBP">LBP</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="AUD">AUD</option>
+            <option value="CAD">CAD</option>
+        </select>
+
+        <h2><button onclick="convert('converter')">Convert</button></h2>
+
+        <section>
+            <h2>Result:</h2>
+            <p id="converterResult"></p>
+        </section>
+    </div>
+
+    <div id="exchangerSection">
+        <h2>Select the currency to convert from:</h2>
+        <select id="exchangerFrom">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="AUD">AUD</option>
+            <option value="CAD">CAD</option>
+            <option value="LBP">LBP</option>
+        </select>
+
+        <h2>Select the currency to convert to:</h2>
+        <select id="exchangerTo">
+            <option value="LBP">LBP</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="AUD">AUD</option>
+            <option value="CAD">CAD</option>
+        </select>
+
+        <h2>Enter the amount to convert:</h2>
+        <input type="number" id="exchangerAmount" min="0">
+
+        <button onclick="convert('exchanger')">Convert</button>
+
+        <section>
+            <h2>Result:</h2>
+            <p id="exchangerResult"></p>
+        </section>
+
+        <section id="history">
+            <h2>History:</h2>
+            <ol id="recentConversions"></ol>
+        </section>
+    </div>
+</main>
+
+   
+
+</body>
+</html>        
