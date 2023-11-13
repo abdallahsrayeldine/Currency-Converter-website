@@ -25,7 +25,7 @@ function convert(section) {
         result = document.getElementById("exchangerResult");
     }
 
-    fetch(`https://v6.exchangerate-api.com/v6/c6c07ad6315d78a9e38573a0/latest/${fromCurrency}`)
+    fetch(`api-key${fromCurrency}`)
         .then(response => response.json())
         .then(data => {
             let rate = data.conversion_rates[toCurrency];
